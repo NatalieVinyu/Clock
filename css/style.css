@@ -29,6 +29,7 @@ body::before {
   background: var(--primary-color);
   top: 180px;
   left: 180px;
+  transform-origin: top left
 }
 
 body::after {
@@ -37,11 +38,13 @@ body::after {
   background-color: var(--secondary-color);
   bottom: 180px;
   right: 180px;
+  transform-origin: bottom right;
 }
 
 .container {
   text-align: center;
-  padding: 2rem 3rem;
+  padding: 3rem 4rem;
+  width: 50ch;
   border-radius: 2rem;
   background-color: rgba(40, 40, 40, 0.35);
   backdrop-filter: blur(10px);
@@ -60,6 +63,7 @@ body::after {
   border-radius: 2rem;
   background-color: rgba(40, 40, 40, 0.45);
   padding: 1rem 1.5rem;
+  width: 4ch;
 }
 
 .time-separator {
