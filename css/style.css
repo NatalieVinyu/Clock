@@ -13,6 +13,7 @@ body {
   position: relative;
   overflow: hidden;
   color: white;
+  font-family: "Orbitron", sans-serif;
 }
 
 body::before, body::after {
@@ -51,7 +52,8 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 15px;
-  font-size: 4em;
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .time-unit {

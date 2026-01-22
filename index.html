@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clock</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="time-units">
-      <div class="time-unit hours">hour</div>
+      <div id="hours" class="time-unit hours">hour</div>
       <div class="time-separator">:</div>
-      <div class="time-unit minutes">minutes</div>
+      <div id="minutes" class="time-unit minutes">minutes</div>
       <div class="time-separator">:</div>
-      <div class="time-unit seconds">seconds</div>
+      <div id="seconds" class="time-unit seconds">seconds</div>
     </div>
-    <div class="current-date">Tuesday, 20 January 2026</div>
+    <div id="currentDate" class="current-date"></div>
   </div>
 
   <script src="js/script.js"></script>

@@ -1,14 +1,27 @@
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
+
+function updateTime(){
 const d = new Date();
-console.log(d);
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ,"Saturday"]
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-let day = d.getDay();
-console.log(day);
-
+let hour = addZero(d.getHours());
+let minute = addZero(d.getMinutes());
+let second = addZero(d.getSeconds());
+let day = weekday[d.getDay()];
 let date = d.getDate();
-console.log(date);
-
-let month = d.getMonth();
-console.log(month);
-
+let month = months[d.getMonth()];
 let year = d.getFullYear();
-console.log(year);
+
+console.log(hour, minute, second)
+document.getElementById("hours").innerHTML = hour
+document.getElementById("minutes").innerHTML = minute
+document.getElementById("seconds").innerHTML = second
+document.getElementById("currentDate").innerHTML = `${day}, ${date} ${month} ${year}`;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
