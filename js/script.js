@@ -1,9 +1,17 @@
 function addZero(i) {
-  if (i < 10) {i = "0" + i}
-  return i;
+  return i < 10 ? "0" + i : i;
 }
 
-function updateTime(){
+let is24hourFormat = true;
+
+const toggleBtn = document.getElementById("toggleButton");
+
+toggleBtn.addEventListener("click", () => {
+  is24hourFormat = !is24hourFormat;
+  updateTime();
+})
+
+function updateTime() {
 const d = new Date();
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ,"Saturday"]
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -16,11 +24,22 @@ let date = d.getDate();
 let month = months[d.getMonth()];
 let year = d.getFullYear();
 
-console.log(hour, minute, second)
+let period = ""
+
+  if (!is24hourFormat) {
+    period = hour <= 12 ? "AM" : "PM";
+    hour = hour % 12 || 12
+    toggleBtn.textContent = period;
+  } else {
+    toggleBtn.textContent = "24H"
+  }
+
 document.getElementById("hours").innerHTML = hour
 document.getElementById("minutes").innerHTML = minute
 document.getElementById("seconds").innerHTML = second
 document.getElementById("currentDate").innerHTML = `${day}, ${date} ${month} ${year}`;
+
+
 }
 
 updateTime();
