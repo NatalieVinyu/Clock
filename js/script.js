@@ -1,10 +1,18 @@
+let body = document.querySelector("body");
+let toggle = document.getElementById("toggleButton");
+
+toggle.onclick = function() {
+  toggle.classList.toggle("active");
+  body.classList.toggle("active");
+}
+
 function addZero(i) {
   return i < 10 ? "0" + i : i;
 }
 
 let is24hourFormat = true;
 
-const toggleBtn = document.getElementById("toggleButton");
+const toggleBtn = document.getElementById("switchButton");
 
 toggleBtn.addEventListener("click", () => {
   is24hourFormat = !is24hourFormat;
@@ -38,8 +46,6 @@ document.getElementById("hours").innerHTML = hour
 document.getElementById("minutes").innerHTML = minute
 document.getElementById("seconds").innerHTML = second
 document.getElementById("currentDate").innerHTML = `${day}, ${date} ${month} ${year}`;
-
-
 }
 
 updateTime();

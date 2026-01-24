@@ -10,16 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="time-units">
-      <div id="hours" class="time-unit hours"></div>
-      <div class="time-separator">:</div>
-      <div id="minutes" class="time-unit minutes"></div>
-      <div class="time-separator">:</div>
-      <div id="seconds" class="time-unit seconds"></div>
-      <span id="toggleButton" class="format-toggle"></span>
+  <div class="toggleButton">
+    <input type="checkbox" class="checkbox" id="check">
+    <label for="check" class="button" id="toggleButton"></label>
+  </div>
+  <div class="page-center">
+    <div class="container">
+      <div class="time-units">
+        <div id="hours" class="time-unit hours"></div>
+        <div class="time-separator">:</div>
+        <div id="minutes" class="time-unit minutes"></div>
+        <div class="time-separator">:</div>
+        <div id="seconds" class="time-unit seconds"></div>
+        <span id="switchButton" class="format-toggle"></span>
+      </div>
+      <div id="currentDate" class="current-date"></div>
     </div>
-    <div id="currentDate" class="current-date"></div>
   </div>
 
   <script src="js/script.js"></script>
