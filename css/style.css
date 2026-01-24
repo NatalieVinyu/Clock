@@ -29,7 +29,6 @@ body::before {
   background: var(--primary-color);
   top: 180px;
   left: 180px;
-  overflow: hidden;
 }
 
 body::after {
@@ -62,7 +61,7 @@ body::after {
   border-radius: 2rem;
   background-color: rgba(40, 40, 40, 0.45);
   padding: 1rem 1.5rem;
-  width: 4ch;
+  width: 6ch;
 }
 
 .time-separator {
@@ -85,4 +84,43 @@ body::after {
 .current-date {
   margin-top: 20px;
   font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  body::before {
+    width: 150px;
+    height: 150px;
+    top: 90px;
+    left: 90px;
+  }
+  body::after {
+    width: 110px;
+    height: 110px;
+    bottom: 90px;
+    right: 90px;
+  }
+  
+  .container {
+    width: 90%;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .time-units {
+    gap: 10px;
+    font-size: 3rem;
+  }
+
+  .time-unit {
+    width: auto;
+  }
+
+  .time-separator {
+    display: none;
+  }
+
+  .format-toggle {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
